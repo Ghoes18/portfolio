@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Twitter UI Clone",
+    "imgUrl": "/assets/twitter-clone.png",
+    "stack": [
+      "React",
+      "Redux",
+      "Firebase",
+      "Material UI"
+    ],
+    "description": "A Twitter UI Clone built with React, Redux, Firebase and Material UI",
+    "githubUrl": "",
+    "liveUrl": ""
+  },
+  {
+    "title": "E-commerce Website",
+    "imgUrl": "/assets/e-commerce.png",
+    "stack": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB"
+    ],
+    "description": "An e-commerce website built with React, Node.js, Express.js and MongoDB",
+    "githubUrl": "",
+    "liveUrl": ""
+  },
+  {
+    "title": "Weather App",
+    "imgUrl": "/assets/weather-app.png",
+    "stack": [
+      "React",
+      "OpenWeatherMap API"
+    ],
+    "description": "A weather app built with React and the OpenWeatherMap API",
+    "githubUrl": "",
+    "liveUrl": ""
+  }
+]

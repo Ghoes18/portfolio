@@ -1,17 +1,19 @@
-import { Header } from './components/Header';
-import { Profile } from './components/Profile';
-import { Menu } from './components/Menu';
+import { Home } from "./components/Home";
+import { Portfolio } from "./components/Portfolio";
+import { Contact } from "./components/Contact";
+import { Timeline } from "./components/Timeline";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 px-[100px]">
-      <Header />
-      <body className="flex flex-col items-center justify-center flex-1 px-20 text-center">
-        <Profile />
-        <Menu />
-      </body>
+    <div className="w-full h-full bg-white dark:bg-gray-900">
+      <Home />
+      <Portfolio />
+      <Contact />
+      <Timeline />
+      <Footer />
     </div>
-  );  
+  );
 }
 
 export default App;

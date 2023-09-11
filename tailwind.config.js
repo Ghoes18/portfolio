@@ -7,12 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#FF9C1B',
-        'secondary': '#EC1B09',
-        'tertiary': '#F2F5F9',
       },
       fontFamily: {
-        'pacifico': ['Pacifico', 'cursive'],
+        sans: ['Inter', 'sans-serif'],
       }
     },
   },
