@@ -7,7 +7,7 @@ export function Home() {
       <p className="mt-4 text-xl font-semibold text-bold">
         Full Stack Web Developer
       </p>
-      <p className="mt-4 text-lg">
+      <p className="max-w-xl m-3 text-sm text-gray-500 dark:text-gray-400">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
         laudantium? Consectetur laboriosam, dicta molestiae unde maiores
         deserunt. Quae laborum pariatur sapiente, ut exercitationem aliquam
