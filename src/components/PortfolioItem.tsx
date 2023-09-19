@@ -16,11 +16,11 @@ export function PortfolioItem({
   liveUrl,
 }: PortfolioItemProps) {
   return (
-    <div className="w-full max-w-md mx-auto border-2 rounded-md shadow-md border-stone-900 dark:border-stone-100">
+    <div className="w-full max-w-md mx-auto overflow-hidden bg-white border rounded-lg shadow-xl border-stone-100 dark:bg-gray-800 dark:border-stone-900">
       <img
         src={imgUrl}
         alt="portfolio item"
-        className="object-cover w-full h-32 rounded-t-md"
+        className="object-cover w-full h-48"
       />
       <div className="w-full p-4">
         <h3 className="mb-2 text-lg font-semibold md:text-xl md:mb-4 dark:text-white">
@@ -45,9 +45,9 @@ export function PortfolioItem({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 mr-2 text-sm font-bold text-white bg-gray-800 rounded hover:bg-gray-700 dark:bg-gray-900 dark:hover:bg-gray-800"
+              className="px-4 py-2 mr-2 text-sm font-bold bg-gray-200 rounded hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 text-stone-900 dark:text-stone-100"
             >
-              GitHub
+              Github
             </a>
           )}
           {liveUrl && (

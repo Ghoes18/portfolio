@@ -1,39 +1,42 @@
 [
   {
     "title": "Twitter UI Clone",
-    "imgUrl": "/assets/twitter-clone.png",
+    "imgUrl": "/assets/twitter-ui-clone.png",
     "stack": [
       "React",
-      "Redux",
-      "Firebase",
-      "Material UI"
+      "TypeScript",
+      "Styled Components",
+      "React Router DOM"
     ],
-    "description": "A Twitter UI Clone built with React, Redux, Firebase and Material UI",
-    "githubUrl": "",
+    "description": "A Twitter UI clone built with React, to practice my skills with Styled Components and React Router DOM",
+    "githubUrl": "https://github.com/Ghoes18/UI-Twitter-Clone",
     "liveUrl": ""
   },
   {
-    "title": "E-commerce Website",
-    "imgUrl": "/assets/e-commerce.png",
+    "title": "Notion Clone",
+    "imgUrl": "/assets/notion-clone.png",
     "stack": [
       "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB"
+      "TypeScript",
+      "TipTap Editor",
+      "Tailwind CSS"
     ],
-    "description": "An e-commerce website built with React, Node.js, Express.js and MongoDB",
-    "githubUrl": "",
+    "description": "This is a Notion clone to implement the writing experience of Notion with the TipTap Editor",
+    "githubUrl": "https://github.com/Ghoes18/notion-clone",
     "liveUrl": ""
   },
   {
-    "title": "Weather App",
-    "imgUrl": "/assets/weather-app.png",
+    "title": "Chat AI",
+    "imgUrl": "/assets/chat-ai.png",
     "stack": [
+      "NextJS",
       "React",
-      "OpenWeatherMap API"
+      "Tailwind CSS",
+      "Vercel AI SDK",
+      "TypeScript"
     ],
-    "description": "A weather app built with React and the OpenWeatherMap API",
-    "githubUrl": "",
+    "description": "A chat app that uses the Vercel AI SDK to generate a response to the user's message",
+    "githubUrl": "https://github.com/Ghoes18/chat-ai",
     "liveUrl": ""
   }
 ]

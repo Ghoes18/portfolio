@@ -1,23 +1,37 @@
 [
   {
+    "year": 2023,
+    "title": "Full Stack Developer",
+    "duration": "6 months",
+    "company": "Alta Digital",
+    "details": "Developed robust web applications using JavaScript (Node.js, Express.js, and ReactJS) for enhanced user experiences. Collaborated with the team to create interactive web apps with VueJS. Ensured software quality and stability through bug fixes and rigorous QA testing. Introduced new features to enhance user functionality and resolve customer-reported issues, improving overall satisfaction."
+  },
+  {
+    "year": 2022,
+    "title": "Full Stack Developer",
+    "duration": "1 month",
+    "company": "Ad-pulse",
+    "details": "Built web applications using JavaScript, PHP, NodeJS, TypeScript, EJS, and OAuth. Collaborated with web designers and backend teams to optimize application visuals, features, speed, and stability. Played a pivotal role in coding, issue identification, and solution implementation. Produced clear and functional documentation for frontend development."
+  },
+  {
+    "year": 2021,
+    "title": "Odoo Developer (Internship)",
+    "duration": "4 months",
+    "company": "Opencloud Lda",
+    "details": "Contributed to software development using Python and XML in an Odoo developer role. Gained experience in C# during the internship at Screen-In Lda. Studied technical management and systems programming, covering C, Java, and MySQL."
+  },
+  {
     "year": 2020,
-    "title": "Job 3",
-    "duration": "1 year",
-    "company": "Company 3",
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl sed aliquam ultricies, nunc nisl ultricies nunc, nec aliquet nisl nunc sed nunc. Sed euismod, nisl sed aliquam ultricies, nunc nisl ultricies nunc, nec aliquet nisl nunc sed nunc."
+    "title": "C# Learning",
+    "duration": "1 month",
+    "company": "Screen-In Lda",
+    "details": "Focused on learning C# programming during this period."
   },
   {
-    "year": 2018,
-    "title": "Job 1",
-    "duration": "1 year",
-    "company": "Company 1",
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl sed aliquam ultricies, nunc nisl ultricies nunc, nec aliquet nisl nunc sed nunc. Sed euismod, nisl sed aliquam ultricies, nunc nisl ultricies nunc, nec aliquet nisl nunc sed nunc."
-  },
-  {
-    "year": 2016,
-    "title": "Internship",
-    "duration": "3 months",
-    "company": "Company 1",
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl sed aliquam ultricies, nunc nisl ultricies nunc, nec aliquet nisl nunc sed nunc. Sed euismod, nisl sed aliquam ultricies, nunc nisl ultricies nunc, nec aliquet nisl nunc sed nunc."
+    "year": 2017,
+    "title": "Technical Management and Systems Programming",
+    "duration": "2 years",
+    "company": "Your School Name",
+    "details": "Studied technical management and systems programming, covering C, Java, and MySQL."
   }
 ]

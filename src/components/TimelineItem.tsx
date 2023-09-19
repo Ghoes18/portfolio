@@ -10,7 +10,8 @@ export function TimelineItem({
   year,
   title,
   duration,
-  details,
+  company,
+  details
 }: TimelineItemProps) {
   return (
     <ol className="relative flex flex-col border-l md:flex-row dark:border-stone-200 border-stone-700">
@@ -24,7 +25,7 @@ export function TimelineItem({
             {title}
           </h3>
           <div className="my-1 text-sm font-normal leading-none text-stone-400 dark:text-stone-500">
-            {duration}
+            {company} ({duration})
           </div>
         </p>
         <p className="my-2 text-base font-normal text-stone-500 dark:text-stone-400">

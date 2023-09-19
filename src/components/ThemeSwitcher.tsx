@@ -36,7 +36,7 @@ export function ThemeSwitcher() {
 
   return (
     <button
-      className="absolute top-4 right-6 focus:outline-none"
+      className="fixed sm:top-4 sm:right-6 focus:outline-none top-3 right-3"
       onClick={toggleTheme}
     >
       {theme === "light" ? (

@@ -5,7 +5,7 @@ export interface TitleProps {
 
 export function Title({ children, id }: TitleProps) {
   return (
-    <h1 id={id} className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+    <h1 id={id} className="mt-4 text-2xl font-bold text-gray-900 dark:text-gray-100">
       {children}
     </h1>
   );
