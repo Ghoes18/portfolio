@@ -1,7 +1,7 @@
 [
   {
     "title": "Twitter UI Clone",
-    "imgUrl": "/assets/twitter-ui-clone.png",
+    "imgUrl": "./assets/twitter-ui-clone.png",
     "stack": [
       "React",
       "TypeScript",
@@ -14,7 +14,7 @@
   },
   {
     "title": "Notion Clone",
-    "imgUrl": "/assets/notion-clone.png",
+    "imgUrl": "./assets/notion-clone.png",
     "stack": [
       "React",
       "TypeScript",
@@ -27,7 +27,7 @@
   },
   {
     "title": "Chat AI",
-    "imgUrl": "/assets/chat-ai.png",
+    "imgUrl": "./assets/chat-ai.png",
     "stack": [
       "NextJS",
       "React",
