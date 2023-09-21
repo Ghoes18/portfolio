@@ -24,6 +24,7 @@ export function Contact() {
             </label>
             <input
               id="name"
+              name="name"
               type="text"
               className="w-full px-4 py-2 text-base font-normal border rounded-md text-stone-900 placeholder-stone-400 bg-stone-100 border-stone-200 dark:bg-stone-900 dark:border-stone-700 focus:ring-stone-500 focus:border-stone-500 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:text-stone-100"
               placeholder="Your name"
@@ -39,6 +40,7 @@ export function Contact() {
             <input
               id="email"
               type="email"
+              name="email"
               className="w-full px-4 py-2 text-base font-normal border rounded-md text-stone-900 placeholder-stone-400 bg-stone-100 border-stone-200 dark:bg-stone-900 dark:border-stone-700 focus:ring-stone-500 focus:border-stone-500 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:text-stone-100"
               placeholder="Your email"
             />
@@ -52,6 +54,7 @@ export function Contact() {
             </label>
             <textarea
               id="message"
+              name="message"
               className="w-full px-4 py-2 text-base font-normal border rounded-md text-stone-900 placeholder-stone-400 bg-stone-100 border-stone-200 dark:bg-stone-900 dark:border-stone-700 focus:ring-stone-500 focus:border-stone-500 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:text-stone-100"
               placeholder="Your message"
               rows={6}
