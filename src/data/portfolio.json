@@ -1,5 +1,18 @@
 [
   {
+    "title": "Travel Best Friend",
+    "imgUrl": "./assets/travel-best-friend.png",
+    "stack": [
+      "React Native",
+      "TypeScript",
+      "Expo",
+      "OpenAI GPT-3"
+    ],
+    "description": "This is a travel app that uses the OpenAi GPT-3 API to generate travel itineraries based on user input. The user can input a location and the number of days they will be traveling, and the app will generate a travel itinerary for them.",
+    "githubUrl": "https://github.com/Ghoes18/travel-best-friend",
+    "liveUrl": ""
+  },
+  {
     "title": "Twitter UI Clone",
     "imgUrl": "./assets/twitter-ui-clone.png",
     "stack": [
