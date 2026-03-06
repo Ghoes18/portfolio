@@ -1,0 +1,105 @@
+---
+import Badge from "../ui/Badge.astro";
+import ProjectRow from "../ui/ProjectRow.astro";
+import projectDates from "../../data/project-dates.json";
+
+type ProjectStatus = "in production" | "paused";
+
+const projects: Array<{
+  number: string;
+  name: string;
+  category: string;
+  description: string;
+  status?: ProjectStatus;
+  image?: string;
+  href: string;
+  repository?: string;
+  date?: string;
+}> = [
+  {
+    number: "01",
+    name: "VIXELLIA",
+    category: "AI / Real Estate SaaS",
+    description: "Comprehensive SaaS platform that transforms raw property photos into production-ready marketing visuals using a sophisticated AI pipeline. Features 3D studio, AI assistant, and Stripe subscriptions.",
+    status: undefined,
+    image: undefined,
+    href: "https://vixellia.com",
+    repository: "https://github.com/Ghoes18/realstate-enhance",
+  },
+  {
+    number: "02",
+    name: "HERCOLES",
+    category: "WhatsApp / Personal Training SaaS",
+    description: "WhatsApp-first SaaS delivering AI-generated personal training and nutrition plans. Features conversational CRM, GPT-5 copilot for coaches, automated PDF delivery, and multi-tenant admin dashboard.",
+    status: undefined,
+    image: undefined,
+    href: "https://hercoles.tech",
+    repository: "https://github.com/Ghoes18/whatsapp-ai-bot",
+  },
+  {
+    number: "03",
+    name: "MEDIA-LOG",
+    category: "Personal / Media Tracker",
+    description: "Full-stack web application to log, rate, and organise movies, TV shows, and games. Features user authentication, persistent database, and clean component-based UI with data visualization.",
+    status: "in production",
+    image: undefined,
+    href: "#",
+    repository: "https://github.com/Ghoes18/Media-Log",
+  },
+  {
+    number: "04",
+    name: "STREAMERDONATIONS",
+    category: "FinTech / Content Creator Tool",
+    description: "Donation platform for Twitch and Kick streamers with real-time customizable alerts. Features Stripe Connect for automated payouts, Pusher real-time overlays, and AI voice messages via ElevenLabs.",
+    status: "paused",
+    image: undefined,
+    href: "#",
+    repository: "https://github.com/Ghoes18/streamerdonations",
+  },
+  {
+    number: "05",
+    name: "AGENDAPRO",
+    category: "SaaS / Scheduling Platform",
+    description: "White-label booking and scheduling SaaS for service-based businesses. Features embeddable booking widget, real-time calendar sync via Supabase Realtime, and commission-free model.",
+    status: "paused",
+    image: undefined,
+    href: "#",
+    repository: "https://github.com/Ghoes18/agendapro",
+  },
+  {
+    number: "06",
+    name: "JUIZ.AI",
+    category: "AI / Legal Tech",
+    description: "AI assistant for legal professionals in Portugal. Provides tools for document generation, legal research, summarizing jurisprudence, and real-time procedural Q&A with guardrails.",
+    status: "paused",
+    image: undefined,
+    href: "#",
+    repository: "https://github.com/Ghoes18/juizai",
+  },
+];
+---
+
+<section id="work" class="px-6 py-24 md:px-12" aria-labelledby="work-heading">
+  <h2 id="work-heading" class="sr-only">Selected Work</h2>
+  <div class="mx-auto max-w-5xl">
+    <Badge variant="default" class="mb-4">SELECTED WORK</Badge>
+    <p class="text-body mb-12 max-w-2xl text-muted-foreground">
+      Conceived, designed, and shipped by me. No agency handoffs, no scattered contractors. One person from idea to deploy.
+    </p>
+    <div class="divide-y-0">
+      {projects.map((p) => (
+        <ProjectRow
+          number={p.number}
+          name={p.name}
+          category={p.category}
+          description={p.description}
+          status={p.status}
+          image={p.image}
+          href={p.href}
+          repository={p.repository}
+          date={p.repository ? (projectDates as Record<string, string | null>)[p.repository] ?? undefined : undefined}
+        />
+      ))}
+    </div>
+  </div>
+</section>

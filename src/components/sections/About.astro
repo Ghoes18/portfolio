@@ -1,0 +1,119 @@
+---
+import SkillsBadges from "../SkillsBadges";
+
+const highlightedSkills = ["Next.js", "TypeScript", "Node.js"];
+const skills = [
+  "Next.js",
+  "TypeScript",
+  "Node.js",
+  "React",
+  "Supabase",
+  "Stripe",
+  "OpenAI",
+  "shadcn/ui",
+  "Google Gemini",
+  "Drizzle ORM",
+  "Tailwind CSS",
+  "GSAP",
+  "Framer Motion",
+  "Vercel",
+  "PostgreSQL",
+  "Pusher",
+  "Better Auth",
+  "Express",
+];
+
+const softSkills = [
+  "Entrepreneurial mindset",
+  "Product ownership",
+  "System design",
+  "Fast learner",
+  "Team collaboration",
+  "Results-driven",
+];
+---
+
+<section id="about" class="border-t border-border px-6 py-24 md:px-12" aria-labelledby="about-heading">
+  <div class="mx-auto max-w-5xl">
+    <!-- Main About Content -->
+    <div class="grid gap-16 md:grid-cols-2 md:gap-24 mb-16">
+      <div>
+        <p id="about-heading" class="text-label mb-4 uppercase tracking-wider text-muted-foreground">About</p>
+        <h2 class="text-h1 mb-6 font-extrabold text-foreground">I build products, not just websites.</h2>
+        <p class="text-body mb-4 text-foreground">
+          Based in Portugal, I build SaaS that gets to market and scales: clear architecture, fewer rewrites, and interfaces users actually use. No fluff; the kind of stack that lasts.
+        </p>
+        <p class="text-body mb-4 text-foreground">
+          Over 3+ years I've shipped backend and frontend myself. You get one person who owns the full system and the outcome.
+        </p>
+        <p class="text-body text-foreground">
+          Portuguese native, English professional working proficiency (B2/C1). Open to remote or hybrid roles.
+        </p>
+      </div>
+      <div class="border-t border-border pt-12 md:border-l md:border-t-0 md:border-l-foreground/30 md:pl-16 md:pt-0">
+        <p class="text-label mb-6 uppercase tracking-wider text-muted-foreground">Core Stack</p>
+        <SkillsBadges client:visible skills={skills} highlightedSkills={highlightedSkills} />
+      </div>
+    </div>
+
+    <!-- Detailed Expertise Grid -->
+    <div class="border-t border-border pt-16">
+      <p class="text-label mb-8 uppercase tracking-wider text-muted-foreground">Technical Expertise</p>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Frontend -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-foreground mb-4">Frontend</h3>
+          <ul class="space-y-2 text-sm text-muted-foreground">
+            <li>TypeScript, React, Next.js</li>
+            <li>Tailwind CSS, shadcn/ui</li>
+            <li>Framer Motion, GSAP</li>
+            <li>Three.js, Vue.js</li>
+          </ul>
+        </div>
+        <!-- Backend -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-foreground mb-4">Backend</h3>
+          <ul class="space-y-2 text-sm text-muted-foreground">
+            <li>Node.js, Express.js</li>
+            <li>REST APIs, Socket.IO</li>
+            <li>JWT, OAuth, Better Auth</li>
+            <li>Python, PHP</li>
+          </ul>
+        </div>
+        <!-- Database -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-foreground mb-4">Data & AI</h3>
+          <ul class="space-y-2 text-sm text-muted-foreground">
+            <li>PostgreSQL (Supabase, Neon)</li>
+            <li>Drizzle ORM, MongoDB</li>
+            <li>OpenAI GPT-4/5, Gemini</li>
+            <li>Vercel AI SDK</li>
+            <li>Cursor, Claude Code</li>
+          </ul>
+        </div>
+        <!-- Cloud -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-foreground mb-4">Cloud & Tools</h3>
+          <ul class="space-y-2 text-sm text-muted-foreground">
+            <li>Vercel, Stripe</li>
+            <li>Cloudflare R2, AWS S3</li>
+            <li>Pusher, Upstash</li>
+            <li>Git/GitHub, Figma</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="border-t border-border pt-16 mt-16">
+      <p class="text-label mb-6 uppercase tracking-wider text-muted-foreground">How I Work</p>
+      <div class="flex flex-wrap gap-3">
+        {softSkills.map((skill) => (
+          <span class="inline-flex items-center rounded-full border border-border bg-secondary px-4 py-2 text-sm font-medium text-foreground">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

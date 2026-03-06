@@ -1,0 +1,24 @@
+---
+interface Props {
+  variant?: "primary" | "secondary" | "ghost" | "link";
+  href: string;
+  class?: string;
+}
+
+const { variant = "primary", href, class: className = "" } = Astro.props;
+
+const baseClasses = "inline-flex items-center justify-center transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-full";
+
+const variantClasses = {
+  primary: "bg-accent text-accent-foreground font-bold px-8 py-4 hover:opacity-90",
+  secondary: "bg-secondary text-secondary-foreground border border-border px-8 py-4 hover:bg-card",
+  ghost: "bg-transparent text-foreground px-8 py-4 hover:bg-secondary",
+  link: "bg-transparent text-foreground underline-offset-4 hover:underline px-0 py-2 rounded-none",
+};
+
+const classes = `${baseClasses} ${variantClasses[variant]} ${className}`.trim();
+---
+
+<a href={href} class={classes}>
+  <slot />
+</a>

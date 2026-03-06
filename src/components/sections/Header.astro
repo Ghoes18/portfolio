@@ -1,0 +1,40 @@
+---
+import Badge from "../ui/Badge.astro";
+---
+
+<header
+  id="header"
+  class="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-4 transition-colors duration-300 md:px-12"
+  aria-label="Site header"
+>
+  <a href="#" class="text-label font-bold uppercase tracking-wide text-foreground" aria-label="Home">GG</a>
+  <nav class="flex items-center gap-6 md:gap-10" aria-label="Main navigation">
+    <a href="#capabilities" class="text-label text-foreground hover:text-accent">What I Do</a>
+    <a href="#work" class="text-label text-foreground hover:text-accent">Work</a>
+    <a href="#experience" class="text-label text-foreground hover:text-accent">Experience</a>
+    <a href="#about" class="text-label text-foreground hover:text-accent">About</a>
+    <a href="#contact" class="text-label text-foreground hover:text-accent">Contact</a>
+    <span class="flex items-center gap-2">
+      <span class="relative flex h-2 w-2" aria-hidden="true">
+        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-availability-dot opacity-75"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-availability-dot"></span>
+      </span>
+      <Badge variant="default">Open to work</Badge>
+    </span>
+  </nav>
+</header>
+
+<script>
+  const header = document.getElementById("header");
+  if (header) {
+    const toggleScrolled = () => {
+      if (window.scrollY > 50) {
+        header.classList.add("bg-background/90", "backdrop-blur-md");
+      } else {
+        header.classList.remove("bg-background/90", "backdrop-blur-md");
+      }
+    };
+    toggleScrolled();
+    window.addEventListener("scroll", toggleScrolled, { passive: true });
+  }
+</script>

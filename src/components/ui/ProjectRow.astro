@@ -1,0 +1,89 @@
+---
+interface Props {
+  number: string;
+  name: string;
+  category: string;
+  description: string;
+  status?: "in production" | "paused";
+  image?: string;
+  href?: string;
+  repository?: string;
+  date?: string;
+}
+
+const { number, name, category, description, status, image, href = "#", repository, date } = Astro.props;
+const dateLabel = date ? (() => {
+  try {
+    const d = new Date(date);
+    return d.toLocaleDateString("en-GB", { month: "short", year: "numeric" });
+  } catch {
+    return undefined;
+  }
+})() : undefined;
+const isExternal = href.startsWith("http");
+---
+
+<div
+  class="group relative flex w-full flex-col gap-2 border-t border-border py-6 transition-colors duration-200 hover:bg-card md:gap-3 md:py-8"
+>
+  <div class="flex w-full items-center gap-8 md:gap-12">
+    <span class="text-label w-12 shrink-0 text-muted-foreground md:w-16">{number}</span>
+    <div class="min-w-0 flex-1">
+      <div class="flex flex-wrap items-baseline gap-2">
+        <a
+          href={href}
+          class="text-h2 font-bold uppercase text-foreground hover:text-accent transition-colors"
+          aria-label={`View project ${name}`}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+        >
+          {name}
+        </a>
+        {status === "in production" && (
+          <span class="text-label rounded-full bg-accent px-2.5 py-0.5 font-medium text-accent-foreground">In production</span>
+        )}
+        {status === "paused" && (
+          <span class="text-label text-muted-foreground">Project paused</span>
+        )}
+      </div>
+      <p class="text-body mt-1.5 max-w-2xl text-muted-foreground">{description}</p>
+    </div>
+    <div class="flex shrink-0 items-center gap-3">
+      {dateLabel && (
+        <span class="text-label text-muted-foreground">{dateLabel}</span>
+      )}
+      <span class="text-label rounded-full border border-border bg-secondary px-3 py-1.5 text-foreground group-hover:border-accent group-hover:bg-accent group-hover:text-accent-foreground">
+        {category}
+      </span>
+    {repository && (
+      <a
+        href={repository}
+        class="text-muted-foreground hover:text-foreground focus:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+        aria-label={`${name} repository`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    )}
+    <a
+      href={href}
+      class="text-foreground hover:text-accent transition-colors"
+      aria-label={`View ${name}`}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+    >
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+      </svg>
+    </a>
+    </div>
+  </div>
+  {image && (
+    <div class="pointer-events-none absolute right-4 top-1/2 hidden w-40 -translate-y-1/2 overflow-hidden rounded-md border border-border bg-card opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 md:block md:w-52">
+      <img src={image} alt="" class="h-full w-full object-cover" />
+    </div>
+  )}
+</div>

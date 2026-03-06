@@ -1,0 +1,16 @@
+---
+import Badge from "../ui/Badge.astro";
+import CapabilityCards from "../CapabilityCards";
+import capabilitiesData from "../../data/capabilities.json";
+---
+
+<section id="capabilities" class="border-t border-border px-6 py-24 md:px-12" aria-labelledby="capabilities-heading">
+  <div class="mx-auto max-w-5xl">
+    <Badge variant="default" class="mb-4">CAPABILITIES</Badge>
+    <h2 id="capabilities-heading" class="text-h1 mb-6 font-extrabold text-foreground">What I Can Do</h2>
+    <p class="text-body mb-12 max-w-2xl text-muted-foreground">
+      From backend to UI — APIs, auth, data, real-time, payments, and deploy. One person from idea to production.
+    </p>
+    <CapabilityCards client:visible capabilities={capabilitiesData} />
+  </div>
+</section>

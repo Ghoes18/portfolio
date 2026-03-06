@@ -1,0 +1,21 @@
+---
+interface Props {
+  variant?: "default" | "accent";
+  class?: string;
+}
+
+const { variant = "default", class: className = "" } = Astro.props;
+
+const baseClasses = "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium transition-colors";
+
+const variantClasses = {
+  default: "bg-secondary text-foreground border border-border",
+  accent: "bg-accent text-accent-foreground",
+};
+
+const classes = `${baseClasses} ${variantClasses[variant]} ${className}`.trim();
+---
+
+<span class={classes}>
+  <slot />
+</span>

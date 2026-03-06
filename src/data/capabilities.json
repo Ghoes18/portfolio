@@ -1,0 +1,56 @@
+[
+  {
+    "id": "apis",
+    "title": "APIs & server logic",
+    "description": "REST and WebSockets, webhooks, server-side validation, rate limiting, and third-party API integration (Stripe, OpenAI, etc.). Node/Express or Next API routes.",
+    "category": "backend"
+  },
+  {
+    "id": "auth",
+    "title": "Auth & sessions",
+    "description": "Better Auth, OAuth, JWT, session handling, and secure token flows. No \"auth as an afterthought.\"",
+    "category": "backend"
+  },
+  {
+    "id": "databases",
+    "title": "Databases & data layer",
+    "description": "Schema design, migrations, Drizzle/ORM, PostgreSQL (Neon/Supabase), queries and indexing. From design to production data.",
+    "category": "backend"
+  },
+  {
+    "id": "realtime",
+    "title": "Real-time backend",
+    "description": "Live channels, presence, and event pipelines (Pusher, Socket.IO, Supabase Realtime). Server-driven real-time, not just UI updates.",
+    "category": "backend"
+  },
+  {
+    "id": "payments",
+    "title": "Payments & billing",
+    "description": "Stripe Checkout/Connect, subscriptions, webhooks, and idempotent payment handling on the server.",
+    "category": "backend"
+  },
+  {
+    "id": "ship-saas",
+    "title": "Ship SaaS from scratch",
+    "description": "End-to-end: architecture, backend + frontend, auth, payments, deploy. One codebase, one owner.",
+    "category": "frontend"
+  },
+  {
+    "id": "ui-animations",
+    "title": "UI & animations",
+    "description": "Pixel-accurate UIs, Framer Motion / GSAP, responsive layouts, and interfaces that feel polished.",
+    "category": "frontend"
+  },
+  {
+    "id": "ai-product",
+    "title": "AI in the product",
+    "description": "GPT/Gemini integration, Vercel AI SDK, guardrails, and UX that feels native. Backend: prompt pipelines, tool use, streaming.",
+    "category": "frontend"
+  },
+  {
+    "id": "deploy",
+    "title": "Deploy & iterate",
+    "description": "Vercel, envs, DB provisioning (Neon/Supabase), and minimal DevOps so you can ship and iterate fast.",
+    "category": "devops"
+  }
+]

@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design System: Dark Luxury Tech — Single Source of Truth
+   --------------------------------------------------------------------------- */
+
+:root {
+  --background: #0A0A0A;
+  --foreground: #FFFFFF;
+  --card: #111111;
+  --card-foreground: #FFFFFF;
+  --secondary: #1A1A1A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #1A1A1A;
+  --muted-foreground: #808080;
+  --accent: #E8FF47;
+  --accent-foreground: #000000;
+  --border: #2B2B2B;
+  --ring: #E8FF47;
+  --availability-dot: #10b981; /* emerald-500 for "available" indicator */
+}
+
+/* Tailwind v4: map semantic tokens to utility classes */
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-availability-dot: var(--availability-dot);
+
+  /* Border radius: sm 4px, md 8px, lg 12px, full 9999px */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Font family */
+  --font-satoshi: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Typography scale (Design System) */
+@layer utilities {
+  .text-display {
+    font-family: var(--font-satoshi);
+    font-weight: 900;
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 1;
+  }
+
+  .text-h1 {
+    font-family: var(--font-satoshi);
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.1;
+  }
+
+  .text-h2 {
+    font-family: var(--font-satoshi);
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  .text-body {
+    font-family: var(--font-satoshi);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .text-label {
+    font-family: var(--font-satoshi);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+}
+
+/* Marquee ticker animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* Smooth scroll for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}

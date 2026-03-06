@@ -1,0 +1,150 @@
+---
+import Badge from "../ui/Badge.astro";
+
+const experiences = [
+  {
+    company: "Alta Digital",
+    href: "https://altadigital.com",
+    position: "Junior Full Stack Developer",
+    period: "Jan 2023 – Jul 2023",
+    location: "Portugal",
+    description: [
+      "Engineered and maintained robust web applications using PHP (Drupal) and Vue.js",
+      "Led bug-fixing initiatives and conducted rigorous QA testing",
+      "Built responsive layouts using Twig and SCSS",
+      "Worked directly with client-reported issues to improve satisfaction",
+    ],
+    skills: ["PHP", "Drupal", "Vue.js", "Twig", "SCSS", "Node.js"],
+  },
+  {
+    company: "Ad-pulse",
+    href: "https://ad-pulse.com",
+    position: "Junior Full Stack Developer",
+    period: "Oct 2022 – Nov 2022",
+    location: "Portugal",
+    description: [
+      "Contributed to web application development using JavaScript, PHP, Node.js, TypeScript",
+      "Implemented OAuth authentication flows",
+      "Worked with EJS templating engine",
+    ],
+    skills: ["JavaScript", "PHP", "Node.js", "TypeScript", "EJS", "OAuth"],
+  },
+  {
+    company: "Opencloud Lda",
+    href: "https://opencloud.pro",
+    position: "Odoo Developer | Intern",
+    period: "Apr 2022 – Jul 2022",
+    location: "Portugal",
+    description: [
+      "Developed custom modules within the Odoo framework",
+      "Resolved client tasks and implemented business logic",
+      "Used Python and XML for module development",
+    ],
+    skills: ["Python", "XML", "Odoo", "ERP"],
+  },
+  {
+    company: "Screen-In Lda",
+    href: "https://screen-in.pt",
+    position: "Software Development Intern",
+    period: "Jun 2021 – Jul 2021",
+    location: "Portugal",
+    description: [
+      "Acquired foundational skills in C# through hands-on projects",
+      "Developed small-scale applications and utilities",
+    ],
+    skills: ["C#", ".NET"],
+  },
+];
+
+const education = [
+  {
+    institution: "Agrupamento de Escolas Dr. Serafim Leite",
+    href: "https://essl.pt",
+    degree: "Professional Course in Systems Management & Programming",
+    level: "Level 4 EQF",
+    period: "Sep 2019 – Jul 2022",
+    description: "Foundational training in algorithms (C), Object-Oriented Programming (Java), and database management (MySQL).",
+  },
+  {
+    institution: "Danki Code",
+    href: "https://pacotefullstack.com",
+    degree: "Online Full-Stack Master Course",
+    level: "Professional Certification",
+    period: "Oct 2020",
+    description: "Self-directed learning across 30+ specialized courses in modern web development (React, Node.js, REST APIs, SCSS, Bootstrap).",
+  },
+];
+---
+
+<section id="experience" class="border-t border-border px-6 py-24 md:px-12" aria-labelledby="experience-heading">
+  <div class="mx-auto max-w-5xl">
+    <Badge variant="default" class="mb-4">EXPERIENCE</Badge>
+    <h2 id="experience-heading" class="text-h1 mb-6 font-extrabold text-foreground">Professional Journey</h2>
+    <p class="text-body mb-12 max-w-2xl text-muted-foreground">
+      From internships to full-stack roles, building production systems and learning continuously.
+    </p>
+
+    <!-- Work Experience -->
+    <div class="space-y-8">
+      {experiences.map((exp, index) => (
+        <div class="group relative border-t border-border pt-8 transition-colors duration-200 hover:bg-card -mx-6 px-6 md:-mx-12 md:px-12">
+          <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <div class="flex-1">
+              <div class="flex flex-wrap items-baseline gap-3 mb-2">
+                <a 
+                  href={exp.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="text-h2 font-bold uppercase text-foreground hover:text-accent transition-colors"
+                >
+                  {exp.company}
+                </a>
+                <span class="text-label text-muted-foreground">{exp.period}</span>
+              </div>
+              <p class="text-body font-medium text-foreground mb-3">{exp.position}</p>
+              <ul class="space-y-1 mb-4">
+                {exp.description.map((item) => (
+                  <li class="text-body-sm text-muted-foreground flex items-start gap-2">
+                    <span class="text-accent mt-1.5">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div class="flex flex-wrap gap-2">
+                {exp.skills.map((skill) => (
+                  <span class="text-label-sm rounded-full border border-border bg-secondary px-2.5 py-1 text-foreground">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Education -->
+    <div class="border-t border-border mt-16 pt-16">
+      <p class="text-label mb-8 uppercase tracking-wider text-muted-foreground">Education & Training</p>
+      <div class="grid gap-8 md:grid-cols-2">
+        {education.map((edu) => (
+          <div class="border border-border rounded-lg p-6 bg-card">
+            <div class="flex flex-wrap items-baseline gap-2 mb-2">
+              <a 
+                href={edu.href}
+                target="_blank"
+                rel="noopener noreferrer" 
+                class="text-body font-bold text-foreground hover:text-accent transition-colors"
+              >
+                {edu.institution}
+              </a>
+            </div>
+            <p class="text-body-sm font-medium text-foreground mb-1">{edu.degree}</p>
+            <p class="text-label-sm text-accent mb-3">{edu.level} · {edu.period}</p>
+            <p class="text-body-sm text-muted-foreground">{edu.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
